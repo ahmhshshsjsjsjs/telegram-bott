@@ -3,7 +3,8 @@ from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes, PreCh
 import os
 import paramiko
 
-TOKEN = os.getenv("8558642201:AAHf0WGbZap5hC8NleMSB70hK39Rd5Bp4YY")
+import os
+TOKEN = os.getenv("TOKEN")
 
 SSH_HOST = os.getenv("silversmmnnaa")
 SSH_USER = os.getenv("silversmmnnaa")
