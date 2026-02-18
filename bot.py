@@ -22,7 +22,7 @@ async def buy(update: Update, context: ContextTypes.DEFAULT_TYPE):
     player_id = context.args[0]
     user_ids[update.effective_user.id] = player_id
 
-    prices = [LabeledPrice("Premium", 100)]
+    prices = [LabeledPrice("Premium", 25)]
     await context.bot.send_invoice(
         chat_id=update.effective_chat.id,
         title="Premium",
