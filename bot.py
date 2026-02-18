@@ -5,18 +5,18 @@ import paramiko
 
 TOKEN = os.getenv("8558642201:AAHf0WGbZap5hC8NleMSB70hK39Rd5Bp4YY")
 
-SSH_HOST = os.getenv("SSH_HOST")
-SSH_USER = os.getenv("SSH_USER")
-SSH_PASS = os.getenv("SSH_PASS")
+SSH_HOST = os.getenv("silverbrawl32")
+SSH_USER = os.getenv("silverbrawl32")
+SSH_PASS = os.getenv("silverbrawl32")
 
 user_ids = {}
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("Premium almak için:\n/buy OYUNCU_ID")
+    await update.message.reply_text("To get premium:\n/buy PLAYER_ID")
 
 async def buy(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if len(context.args) == 0:
-        await update.message.reply_text("Kullanım: /buy OYUNCU_ID")
+        await update.message.reply_text("Kullanım: /buy PLAYER_ID")
         return
 
     player_id = context.args[0]
@@ -26,7 +26,7 @@ async def buy(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await context.bot.send_invoice(
         chat_id=update.effective_chat.id,
         title="Premium",
-        description=f"Oyuncu ID: {player_id}",
+        description=f"Player ID: {player_id}",
         payload="premium",
         currency="XTR",
         prices=prices,
