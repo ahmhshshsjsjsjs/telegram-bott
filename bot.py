@@ -53,11 +53,13 @@ async def success(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user_id = update.effective_user.id
     player_id = user_ids.get(user_id)
 
-    if player_id:
-        give_premium(player_id)
-        await update.message.reply_text("Ödeme başarılı! Premium verildi.")
-    else:
-        await update.message.reply_text("Ödeme alındı ama ID bulunamadı.")
+    if context.args:
+    player_id = context.args[0]
+
+    give_premium(player_id)
+    await update.message.reply_text(f"Ödeme başarılı! {player_id} için premium verildi.")
+else:
+    await update.message.reply_text("Lütfen oyuncu kodu girin. Örnek: /buy #89PU")
 
 app = ApplicationBuilder().token(TOKEN).build()
 
