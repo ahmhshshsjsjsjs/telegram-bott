@@ -5,9 +5,9 @@ import paramiko
 
 TOKEN = os.getenv("8558642201:AAHf0WGbZap5hC8NleMSB70hK39Rd5Bp4YY")
 
-SSH_HOST = os.getenv("silverbrawl32")
-SSH_USER = os.getenv("silverbrawl32")
-SSH_PASS = os.getenv("silverbrawl32")
+SSH_HOST = os.getenv("silversmmnnaa")
+SSH_USER = os.getenv("silversmmnnaa")
+SSH_PASS = os.getenv("silversmmnnaa")
 
 user_ids = {}
 
